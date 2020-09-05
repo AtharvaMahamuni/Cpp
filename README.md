@@ -9,7 +9,7 @@ May be this guide will take 1-2 years for completion but Goal is not to win some
 
 This guide will start with some important concepts from c++ to all over mastering data structures and algorithms.
 
-===================================-connect me-=====================================
+------------------------------------------------------------------------------------
      If you found some problems you can contact me at atharvamahamuni54@gmail.com   
     **You can also connect me on:  **                                               
     Instagram: https://www.instagram.com/_atharvamahamuni_/                         
