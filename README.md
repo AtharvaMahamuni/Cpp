@@ -4,6 +4,7 @@ I am trying to become good at competetive programming and this is the guide whic
 I hope when you find this it is at the postion were you can learn from it. I am trying to add something new every single day.
 
 I hope this guide will help you to start with CP. I am linking all useful links and problems and there solutions here.
+(Suggetions are always welcome email address: atharvamahamuni54@gmail.com
 
 This guide will start with some important concepts from c++ to all over mastering data structures and algorithms.
 I will try to give answer of everything that why I choosed this language or why I am using this data structure or why I am trying 
