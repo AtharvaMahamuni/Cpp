@@ -17,7 +17,7 @@ This guide will start with some important concepts from c++ to all over masterin
 
 
 ------------------------------------------------
-Start date to build this guide is 05/09/2020.  |
+ 
 -----------------------------------------------
 *****************************************************************************************************************
 One suggetion:
