@@ -74,3 +74,6 @@ int main()
 //variable is available to me or for how much time the value
 //inside the variable is available to me.
 //eg. static, register(to store the variable for fast access), extern(It is used to add values at the time of linking), auto(now not used)
+
+//for brief information about qulifiers visit:
+//https://www.w3schools.in/cplusplus-tutorial/qualifiers-storage-classes/
