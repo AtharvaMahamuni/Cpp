@@ -26,3 +26,6 @@ int main()
 
     return 0;
 }
+
+//Functions sneek-peek just the simpke stuff you can refer:
+//https://www.w3schools.com/cpp/cpp_functions.asp
