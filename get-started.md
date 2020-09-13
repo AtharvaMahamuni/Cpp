@@ -16,4 +16,4 @@ As a competitive programming is like a sports then you can't give excuses about 
 
 That's all I hope you have convienced to do competitive programming so let's proceed from very basic.
 
-Prerequisites to follow this guid is just you need to know some basic concepts in programmin and that's all you can follow along.
+Prerequisites to follow this guide is just you need to know some basic concepts in programmin and that's all you can follow along.
