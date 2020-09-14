@@ -1,0 +1,2 @@
+Create a calculator that takes a number, a basic math operator (+,-,*,/,^), and a second number all from user input, 
+and have it print the result of the mathematical operation. The mathematical operations should be wrapped inside of functions.
