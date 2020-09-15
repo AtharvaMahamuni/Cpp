@@ -22,3 +22,6 @@ int main()
 
     return 0;
 }
+
+//Templates:
+// https://www.geeksforgeeks.org/templates-cpp/
