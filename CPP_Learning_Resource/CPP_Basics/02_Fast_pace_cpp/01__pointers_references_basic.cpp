@@ -15,7 +15,7 @@ int main()
     //We can assign value from one variable to another.
 
     int *myl;
-    myl = &life;
+    myl = &life; //referncing
     cout << myl << endl;
     myl = &my_life; //here we are storing address of my_life in myl (It is something known as referncing.)
     cout << myl << endl;
