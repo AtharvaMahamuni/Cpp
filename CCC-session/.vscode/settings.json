@@ -1,8 +1,5 @@
 {
     "files.associations": {
-        "xstring": "cpp",
-        "string": "cpp",
-        "iostream": "cpp",
         "cmath": "cpp",
         "cstddef": "cpp",
         "cstdint": "cpp",
@@ -14,6 +11,7 @@
         "initializer_list": "cpp",
         "ios": "cpp",
         "iosfwd": "cpp",
+        "iostream": "cpp",
         "istream": "cpp",
         "limits": "cpp",
         "memory": "cpp",
@@ -22,7 +20,6 @@
         "stdexcept": "cpp",
         "streambuf": "cpp",
         "system_error": "cpp",
-        "tuple": "cpp",
         "type_traits": "cpp",
         "typeinfo": "cpp",
         "utility": "cpp",
@@ -34,9 +31,9 @@
         "xmemory": "cpp",
         "xmemory0": "cpp",
         "xstddef": "cpp",
+        "xstring": "cpp",
         "xtr1common": "cpp",
         "xutility": "cpp",
-        "algorithm": "cpp",
         "vector": "cpp"
     }
 }

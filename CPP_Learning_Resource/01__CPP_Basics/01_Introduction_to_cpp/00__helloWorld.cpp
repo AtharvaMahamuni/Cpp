@@ -2,7 +2,6 @@
 //(1)
 #include <cstdio> //It is one of the library which contains C standard input output functions
 // using namespace std;
-
 int main()
 {
     puts("Turn on computer"); //puts is the function from cstdio
