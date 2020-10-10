@@ -1,0 +1,24 @@
+Sorting is a fundamental algorithm design problem.
+
+
+There are many algorithms for sorting, and they are also good examples of
+how to apply different algorithm design techniques. The efficient general sorting
+algorithms work in O(nlogn) time, and many algorithms that use sorting as a
+subroutine also have this time complexity.
+
+
+**Sorting Theory:
+=================
+Given an array that contains n elements, your task is to sort the elements in
+increasing order.
+
+For example, the array
+1 3 8 2 9 2 5 6
+
+will be as follows after sorting:
+1 2 2 3 5 6 8 9
+
+
+Simple algorithms for sorting an array work in O(n2) time. Such algorithms
+are short and usually consist of two nested loops. A famous O(n2) time sorting
+algorith is bubble sort.
