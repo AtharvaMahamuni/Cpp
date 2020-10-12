@@ -1,0 +1,31 @@
+Searching algorithms are basically used for searching an key element from given set of numbers.
+For Input we are given with some set of numbers and key value.
+In output we have to state that whether the key element is present or not.
+
+There are 3 types of Searching Algorithms 
+1. Linear Searching
+2. Binary Searching 
+3. Hashing
+
+Linear Searching:
+=================
+In linear search we start to search the elemnt from first postition of an array till the last position.
+when we get an eliment in array we set the flag to 1 and break the loop. If element is not found we keep 
+flag as 0. Then we check the condition if flag is found as 1 then we say the element is present otherwise 
+we say element is not present.
+The best case for Linear Search is when the element is present at first postion,
+and the worst case is when element is present at last position.
+The timecomplexity of Linear search is O(n).
+
+
+Binary Search:
+==============
+In binary search set of elements is sorted and we start to search from middle of an array.
+If the element is present at the middle then it is the best case, otherwise we check whether the 
+key element is smaller than or grater than the given element, if element is small we check at the right
+half and if the element is grater we check at the right half. We keep searching for element until we can't 
+break array further or until high can't become less than low. If element is found we make flag 1 otherwise it remain 0. 
+This algorithm is also known as divide and conqure algorithm. 
+The best case for this algorithm when the element is present at middle of an array,
+and the worst case when the element is present at the start or end of an array.
+The time complexity of this algorithm is O(logn).
