@@ -37,4 +37,18 @@ With every iteration our problem get reduced by 1 element from right side.
 --------------------------------------------------------------------------------------------
 
 2. Selection Sort:
+Selection sort has a time complexity of O(n^2).
+In selection sort we pick the smallest element from an array and place it at its appropriate position.
+After every iteration the problem get reduced by one from left hand side.
 
+The no. of swaps required in selection sort are less then the no. of swaps required in bubble sort.
+So selection sort is more effecient than bubble sort. Due to the no. of swaps required.
+
+-----------------------------------------------------------------------------------------------
+
+3. Insertion Sort:
+Time complecity of Insertion sort is O(n^2).
+In insertion sort we devide array in two parts. We consider the left part of an array is sorted part
+and right part of an array is unsorted part. In each iteration we pick the first element from right hand side and move it 
+into a left hand side at its appropriate position using displacement. In this way the unsorted list start to 
+reduce by one with each iteration.
