@@ -52,3 +52,15 @@ In insertion sort we devide array in two parts. We consider the left part of an 
 and right part of an array is unsorted part. In each iteration we pick the first element from right hand side and move it 
 into a left hand side at its appropriate position using displacement. In this way the unsorted list start to 
 reduce by one with each iteration.
+
+------------------------------------------------------------------------------------------------
+
+4. Merge Sort:
+Time compexity for Merge sort is O(nlog(n)) but for worst case it is O(n^2).
+Merge sort will work on the divide and conqure strategy. There are two routines of recursion in
+Merge sort known as divide and other is merge. In divide routine we divide our problem into small
+parts from the middle of an array. When we reach at only 1 element then that element is considered as 
+already sorted and then we start to merge the two conscutive sorted arrays.
+Merge sort require extra space for temprory array that is why it has more space compexity than any other
+sorting technique but it is effecient according to time but only when there is not an worst case.
+
