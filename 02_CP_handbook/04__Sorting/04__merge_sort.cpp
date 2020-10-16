@@ -6,51 +6,43 @@ void merge(int arr[], int low, int mid, int high)
     int n1 = mid - low + 1;
     int n2 = high - mid;
 
-    // Create temp arrays
-    int L[n1], R[n2];
+    int l_subArr[n1];
+    int r_subArr[n2];
 
-    // Copy data to temp arrays L[] and R[]
     for (int i = 0; i < n1; i++)
-        L[i] = arr[low + i];
+    {
+        l_subArr[i] = arr[low + i];
+    }
     for (int j = 0; j < n2; j++)
-        R[j] = arr[mid + 1 + j];
+    {
+        r_subArr[j] = arr[mid + 1 + j];
+    }
 
-    // Merge the temp arrays back into arr[l..r]
-
-    // Initial index of first subarray
-    int i = 0;
-
-    // Initial index of second subarray
-    int j = 0;
-
-    // Initial index of merged subarray
-    int k = low;
+    int i = 0, j = 0, k = low;
 
     while (i < n1 && j < n2)
     {
-        if (L[i] <= R[j])
+        if (l_subArr[i] <= r_subArr[j])
         {
-            arr[k] = L[i];
+            arr[k] = l_subArr[i];
             i++;
         }
         else
         {
-            arr[k] = R[j];
+            arr[k] = r_subArr[j];
             j++;
         }
         k++;
     }
-
     while (i < n1)
     {
-        arr[k] = L[i];
+        arr[k] = l_subArr[i];
         i++;
         k++;
     }
-
     while (j < n2)
     {
-        arr[k] = R[j];
+        arr[k] = r_subArr[j];
         j++;
         k++;
     }
@@ -60,7 +52,7 @@ void divide(int arr[], int low, int high)
 {
     if (low < high)
     {
-        int mid = low + (high - low) / 2;
+        int mid = low + ((high - low) / 2);
 
         divide(arr, low, mid);
         divide(arr, mid + 1, high);
@@ -72,22 +64,25 @@ void divide(int arr[], int low, int high)
 int main()
 {
     int n;
-    cout << "Enter the number of inputs: ";
+    cout << "Enter the no. of inputs: ";
     cin >> n;
 
     int arr[n];
-    cout << "Enter the numbers: " << endl;
+    cout << "Enter the inputs: " << endl;
     for (int i = 0; i < n; i++)
     {
         cin >> arr[i];
     }
 
-    //Merge Sort
-    divide(arr, 0, n - 1);
+    int low = 0, high = n - 1;
 
-    for (int i : arr)
+    //Merge Sort
+    divide(arr, low, high);
+
+    cout << "Sorted Array: " << endl;
+    for (int i = 0; i < n; i++)
     {
-        cout << i << " ";
+        cout << arr[i] << " ";
     }
 
     return 0;
