@@ -8,6 +8,7 @@ void swap(int *a, int *b)
     *b = t;
 }
 
+// Function to partition the array on the basis of pivot element
 int partition(int arr[], int low, int high)
 {
     int pivot = arr[high]; // pivot
@@ -30,10 +31,14 @@ void quickSort(int arr[], int low, int high)
 {
     if (low < high)
     {
-        int pivot = partition(arr, low, high);
+        /* pi is partitioning index, arr[p] is now  
+        at right place */
+        int partition_index = partition(arr, low, high);
 
-        quickSort(arr, low, pivot - 1);
-        quickSort(arr, pivot + 1, high);
+        // Separately sort elements before
+        // partition and after partition
+        quickSort(arr, low, partition_index - 1);
+        quickSort(arr, partition_index + 1, high);
     }
 }
 
@@ -50,6 +55,8 @@ int main()
         cin >> arr[i];
     }
 
+    quickSort(arr, 0, n - 1);
+
     cout << "Sorted array is: " << endl;
     for (int i = 0; i < n; i++)
     {
@@ -59,4 +66,5 @@ int main()
     return 0;
 }
 
-//TODO: FIX BUG at partitioning
+// This is good refernce for quick sort:
+// https://www.programiz.com/dsa/quick-sort
