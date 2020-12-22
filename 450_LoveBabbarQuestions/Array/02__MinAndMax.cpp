@@ -22,8 +22,8 @@ int main()
       min = arr[i];
   }
 
-  cout << "MAX: " << max << endl
-       << "MIN: " << min << endl;
+  cout << "MAX: " << max << endl;
+  cout << "MIN: " << min << endl;
 
   return 0;
 }
