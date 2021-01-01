@@ -8,7 +8,7 @@ int main()
     cout << "Hello, World" << endl;
 
     return 0;
-    puts("This line never execute");
+    puts("This line never execute"); //nothing will execute after return.
 }
 
 //I don't think abouve code had gave you any surprise if you are already familiar with C++
