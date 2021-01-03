@@ -72,9 +72,22 @@ void DoublyLinkedList::deleteAtStart() {}
 void DoublyLinkedList::deleteAtEnd() {}
 void DoublyLinkedList::deleteAtGivenLocation() {}
 
-void DoublyLinkedList::traverse() 
+void DoublyLinkedList::traverse()
 {
-    
+    if (head == NULL && tail == NULL)
+    {
+        cout << "Linked List is Empty" << endl;
+    }
+    else
+    {
+        q = head;
+        while (q != NULL)
+        {
+            cout << q->data << " ";
+            q = q->next;
+        }
+        cout << endl;
+    }
 }
 
 int main()
@@ -83,7 +96,7 @@ int main()
     DoublyLinkedList dlist;
     do
     {
-        cout << "---------------------------MENU--------------------------------" << endl;
+        cout << "----------------------------MENU--------------------------------" << endl;
         cout << "1.Create at Start\n"
              << "2.Create at End\n"
              << "3.Create at Given Location\n"
