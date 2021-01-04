@@ -67,9 +67,109 @@ void DoublyLinkedList::createAtEnd()
         tail = p;
     }
 }
-void DoublyLinkedList::createAtGivenLocation() {}
-void DoublyLinkedList::deleteAtStart() {}
-void DoublyLinkedList::deleteAtEnd() {}
+
+void DoublyLinkedList::createAtGivenLocation()
+{
+    p = new Node;
+    int loc;
+    int i = 1;
+    cout << "Enter the data: ";
+    cin >> p->data;
+    cout << "Enter the location: ";
+    cin >> loc;
+
+    if (loc == 1)
+    {
+        if (head == NULL && tail == NULL)
+        {
+            head = p;
+            tail = p;
+            p->next = NULL;
+            p->previous = NULL;
+        }
+        else
+        {
+            q = head;
+            while (i < loc && q != NULL)
+            {
+                q = q->next;
+                i++;
+            }
+            if (q == NULL)
+            {
+                cout << "Invalid Location" << endl;
+            }
+            else if (q == tail)
+            {
+                q->next = p;
+                p->next = NULL;
+                p->previous = p;
+                tail = p;
+            }
+            else
+            {
+                p->next = q->next;
+                q->next->previous = p;
+                p->previous = q;
+                q->next = p;
+            }
+        }
+    }
+}
+
+void DoublyLinkedList::deleteAtStart()
+{
+    if (head == NULL && tail == NULL)
+    {
+        cout << "Linked List is Empty" << endl;
+    }
+    else
+    {
+        if (head->next == NULL && tail->next == NULL)
+        {
+            p = head;
+            cout << p->data << "Deleted" << endl;
+            delete p;
+            head = NULL;
+            tail = NULL;
+        }
+        else
+        {
+            p = head;
+            head = p->next;
+            head->previous = NULL;
+            delete p;
+        }
+    }
+}
+
+void DoublyLinkedList::deleteAtEnd()
+{
+    if (head == NULL && tail == NULL)
+    {
+        cout << "Deleting empty list" << endl;
+    }
+    else
+    {
+        if (head->next == NULL && tail->next == NULL)
+        {
+            p = head;
+            cout << p->data << "Deleted" << endl;
+            delete p;
+            head = NULL;
+            tail = NULL;
+        }
+        else
+        {
+            p = tail;
+            q = tail->previous;
+            tail = q;
+            tail->next = NULL;
+            delete p;
+        }
+    }
+}
+
 void DoublyLinkedList::deleteAtGivenLocation() {}
 
 void DoublyLinkedList::traverse()
