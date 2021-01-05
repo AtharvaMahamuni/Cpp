@@ -170,7 +170,68 @@ void DoublyLinkedList::deleteAtEnd()
     }
 }
 
-void DoublyLinkedList::deleteAtGivenLocation() {}
+void DoublyLinkedList::deleteAtGivenLocation()
+{
+    if (head == NULL && tail == NULL)
+    {
+        cout << "Linked list is Empty" << endl;
+    }
+    else
+    {
+        int i = 1;
+        int loc;
+        cout << "Enter the location: ";
+        cin >> loc;
+
+        if (loc == 1)
+        {
+            if (head->next == NULL && tail->next == NULL)
+            {
+                p = head;
+                head = NULL;
+                tail = NULL;
+                cout << p->data << "Deleted" << endl;
+                delete p;
+            }
+            else if (head->next != NULL)
+            {
+                p = head;
+                head = head->next;
+                head->previous = NULL;
+                cout << p->data << " deleted" << endl;
+                delete p;
+            }
+            else
+            {
+                cout << "Invalid Location" << endl;
+            }
+        }
+        else
+        {
+            q = head;
+            p = head->next;
+
+            while (i < loc - 1 && p != NULL)
+            {
+                q = p;
+                p = p->next;
+                i++;
+            }
+
+            if (p == NULL)
+            {
+                cout << "Invalid Location" << endl;
+            }
+            else
+            {
+                q->next = p->next;
+                p->next->previous = q;
+                cout << p->data << " deleted" << endl;
+                delete p;
+            }
+        }
+    }
+}
 
 void DoublyLinkedList::traverse()
 {
