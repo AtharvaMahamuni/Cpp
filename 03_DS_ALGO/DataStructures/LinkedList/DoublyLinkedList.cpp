@@ -145,6 +145,7 @@ void DoublyLinkedList::deleteAtStart()
             p = head;
             head = p->next;
             head->previous = NULL;
+            cout << p->data << "Deleted" << endl;
             delete p;
         }
     }
@@ -172,6 +173,7 @@ void DoublyLinkedList::deleteAtEnd()
             q = tail->previous;
             tail = q;
             tail->next = NULL;
+            cout << p->data << "Deleted" << endl;
             delete p;
         }
     }
