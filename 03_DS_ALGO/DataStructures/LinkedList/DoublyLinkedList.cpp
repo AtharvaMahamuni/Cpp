@@ -89,30 +89,37 @@ void DoublyLinkedList::createAtGivenLocation()
         }
         else
         {
-            q = head;
-            while (i < loc && q != NULL)
-            {
-                q = q->next;
-                i++;
-            }
-            if (q == NULL)
-            {
-                cout << "Invalid Location" << endl;
-            }
-            else if (q == tail)
-            {
-                q->next = p;
-                p->next = NULL;
-                p->previous = p;
-                tail = p;
-            }
-            else
-            {
-                p->next = q->next;
-                q->next->previous = p;
-                p->previous = q;
-                q->next = p;
-            }
+            p->next = head;
+            head->previous = p;
+            p->previous = NULL;
+            head = p;
+        }
+    }
+    else
+    {
+        q = head;
+        while (i < loc - 1 && q != NULL)
+        {
+            q = q->next;
+            i++;
+        }
+        if (q == NULL)
+        {
+            cout << "Invalid Location" << endl;
+        }
+        else if (q == tail)
+        {
+            q->next = p;
+            p->next = NULL;
+            p->previous = p;
+            tail = p;
+        }
+        else
+        {
+            p->next = q->next;
+            q->next->previous = p;
+            p->previous = q;
+            q->next = p;
         }
     }
 }
