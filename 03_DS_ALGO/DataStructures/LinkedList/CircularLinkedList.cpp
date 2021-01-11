@@ -102,9 +102,37 @@ void LinkedList ::deleteAtStart()
     }
 }
 
-void LinkedList ::deleteAtEnd() {}
+void LinkedList ::deleteAtEnd()
+{
+    if (head == NULL)
+    {
+        cout << "Linked list is empty" << endl;
+    }
+    else
+    {
+        if (head->next = head)
+        {
+            p = head;
+            head = NULL;
+            delete p;
+        }
+        else
+        {
+            q = head
+                p = head->next;
+            while (p->next != head)
+            {
+                q = p;
+                p = p->next;
+            }
+            q->next = head;
+            delete p;
+        }
+    }
+}
+
 void LinkedList ::deleteAtGivenLocation() {}
-void LinkedList ::createAtEnd() {}
+void LinkedList ::traverse() {}
 
 int main()
 {
