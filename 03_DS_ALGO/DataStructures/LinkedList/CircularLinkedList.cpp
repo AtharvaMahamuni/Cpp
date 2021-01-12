@@ -12,7 +12,7 @@ typedef struct node Node;
 class LinkedList
 {
 
-    Node *p, *q, *head;
+    Node *p = NULL, *q = NULL, *head = NULL;
 
 public:
     void createAtStart();
@@ -85,6 +85,7 @@ void LinkedList ::deleteAtStart()
         {
             p = head;
             head = NULL;
+            cout << p->data << " deleted" << endl;
             delete p;
         }
         else
@@ -97,6 +98,7 @@ void LinkedList ::deleteAtStart()
             }
             q->next = p->next;
             head = q->next;
+            cout << p->data << " deleted" << endl;
             delete p;
         }
     }
@@ -110,29 +112,50 @@ void LinkedList ::deleteAtEnd()
     }
     else
     {
-        if (head->next = head)
+        if (head->next == head)
         {
             p = head;
             head = NULL;
+            cout << p->data << " deleted" << endl;
             delete p;
         }
         else
         {
-            q = head
-                p = head->next;
+            q = head;
+            p = head->next;
             while (p->next != head)
             {
                 q = p;
                 p = p->next;
             }
             q->next = head;
+            cout << p->data << " deleted" << endl;
             delete p;
         }
     }
 }
 
 void LinkedList ::deleteAtGivenLocation() {}
-void LinkedList ::traverse() {}
+
+void LinkedList ::traverse()
+{
+    if (head == NULL)
+    {
+        cout << "Linked List is Empty" << endl;
+    }
+    else
+    {
+        p = head;
+
+        cout << p->data << " ";
+        while (p->next != head)
+        {
+            p = p->next;
+            cout << p->data << " ";
+        }
+        cout << endl;
+    }
+}
 
 int main()
 {
@@ -152,7 +175,7 @@ int main()
              << "8.Exit" << endl;
         cout << "----------------------------------------------\n";
 
-        cout << "Enter the option no."
+        cout << "Enter the option no.:"
              << " ";
         cin >> n;
 
