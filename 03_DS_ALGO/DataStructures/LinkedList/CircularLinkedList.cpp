@@ -71,7 +71,47 @@ void LinkedList ::createAtEnd()
     }
 }
 
-void LinkedList ::createAtGivenLocation() {}
+void LinkedList ::createAtGivenLocation()
+{
+    p = new Node;
+    int pos;
+    cout << "Enter the data: ";
+    cin >> p->data;
+    cout << "Enter the location: ";
+    cin >> n;
+
+    if (n == 1)
+    {
+        if (head == NULL)
+        {
+            head = p;
+            p->next = head;
+        }
+        else
+        {
+            p->next = head;
+            q = head;
+            while (q->next != head)
+            {
+                q = q->next;
+            }
+            head = p;
+            q->next = head;
+        }
+    }
+    else
+    {
+        int i = 1;
+        q = head->next;
+        while (i < pos - 1 && q != head)
+        {
+            q = q->next;
+            i++;
+        }
+        p->next = q->next;
+        q->next = p;
+    }
+}
 
 void LinkedList ::deleteAtStart()
 {
