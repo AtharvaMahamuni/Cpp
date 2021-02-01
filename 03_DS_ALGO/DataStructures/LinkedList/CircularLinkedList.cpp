@@ -78,9 +78,9 @@ void LinkedList ::createAtGivenLocation()
     cout << "Enter the data: ";
     cin >> p->data;
     cout << "Enter the location: ";
-    cin >> n;
+    cin >> pos;
 
-    if (n == 1)
+    if (pos == 1)
     {
         if (head == NULL)
         {
@@ -103,7 +103,7 @@ void LinkedList ::createAtGivenLocation()
     {
         int i = 1;
         q = head->next;
-        while (i < pos - 1 && q != head)
+        while (i < pos && q != head)
         {
             q = q->next;
             i++;
@@ -175,7 +175,56 @@ void LinkedList ::deleteAtEnd()
     }
 }
 
-void LinkedList ::deleteAtGivenLocation() {}
+void LinkedList ::deleteAtGivenLocation()
+{
+    if (head == NULL)
+    {
+        cout << "Linked list is empty" << endl;
+    }
+    else
+    {
+        int loc;
+        cout << "Enter the location : ";
+        cin >> loc;
+
+        if (loc == 1)
+        {
+            p = head;
+            q = head;
+            head = head->next;
+            while (q->next != p)
+            {
+                q = q->next;
+            }
+            q->next = head;
+            delete p;
+        }
+
+        else
+        {
+            q = head;
+            p = head->next;
+            int i = 1;
+            while (i < loc - 1 && p != head)
+            {
+                q = p;
+                p = p->next;
+                i++;
+            }
+
+            if (p != head)
+            {
+                q->next = p->next;
+                delete p;
+            }
+
+            else
+            {
+                cout << "Wrong location" << endl;
+            }
+        }
+    }
+}
 
 void LinkedList ::traverse()
 {
