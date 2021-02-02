@@ -32,17 +32,27 @@ Node *head = NULL, *tail = NULL, *p = NULL;
 
 void reverse()
 {
-    Node *prev = NULL, *curr = NULL;
+    Node *nPrev = NULL;
+    Node *nCurr = head;
+    Node *nNext = head->next;
 
-    // while (tail->next != NULL)
+    while (nCurr != NULL)
     {
+        nCurr->next = nPrev;
+        nPrev = nCurr;
+        nCurr = nNext;
+        if (nNext != NULL)
+            nNext = nNext->next;
     }
+
+    head = nPrev;
 }
 
 void insert(int n)
 {
     p = new Node;
     p->data = n;
+
     if (head == NULL)
     {
         head = p;
@@ -84,6 +94,13 @@ int main()
         insert(i);
     }
 
+    //Before
+    traverse();
+
+    cout << endl;
+    reverse();
+
+    //After
     traverse();
 
     return 0;
