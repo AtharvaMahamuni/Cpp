@@ -30,7 +30,7 @@ typedef struct node Node;
 
 Node *head = NULL, *tail = NULL, *p = NULL;
 
-Node *reverse(Node *node)
+Node *reverse(Node *node) //This * defines that the return type of function is Node* it dosen't have any relation with the functional pointer it just specifies the return type
 {
     if (node == NULL)
         return NULL;
@@ -39,8 +39,8 @@ Node *reverse(Node *node)
         head = node;
         return node;
     }
-    Node *node1 = reverse(node->next);
-    node1->next = node;
+    Node *tempNode = reverse(node->next);
+    tempNode->next = node;
     node->next = NULL;
     return node;
 }
