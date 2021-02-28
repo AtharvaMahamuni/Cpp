@@ -9,11 +9,6 @@ int main()
   int min = arr[0];
   int arrSize = sizeof(arr) / sizeof(arr[0]);
 
-  // for (int i : arr)
-  // {
-  //   cout << i << " ";
-  // }
-
   for (int i = 0; i < arrSize; i++)
   {
     if (arr[i] > max)
