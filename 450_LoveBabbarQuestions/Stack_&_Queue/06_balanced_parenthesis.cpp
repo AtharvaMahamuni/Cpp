@@ -20,19 +20,19 @@ char pop()
     return c;
 }
 
-bool flip(char p)
+char flip(char p)
 {
-    if (p == ')')
+    if (p == '(')
     {
-        return '(';
+        return ')';
     }
-    else if (p == ']')
+    else if (p == '[')
     {
-        return '[';
+        return ']';
     }
     else
     {
-        return '{';
+        return '}';
     }
 }
 
@@ -42,12 +42,22 @@ bool checkParanthesis(string pattern)
 
     for (int i = 0; (pattern[i] == '(' || pattern[i] == '[' || pattern[i] == '{'); i++)
     {
-        cout << pattern[i] << endl;
+        // cout << pattern[i] << endl;
         push(pattern[i]);
     }
     // cout << pattern << endl;
 
     //TODO: Write a code to pop and compare the paranthesis
+
+    for (int i = (pattern.length() / 2); i < pattern.length(); i++)
+    {
+        // cout << flip(pop());
+        if (pattern[i] != flip(pop()))
+        {
+            isIt = false;
+            break;
+        }
+    }
 
     return isIt;
 }
