@@ -15,7 +15,7 @@ public:
         _secret = newSecret;
     }
 
-    int getSecret() const; //This is getter which will give us the value from private.
+    int getSecret() const; //This is getter which will give us the value from private section.
     // {
     //     return _secret;
     // }
