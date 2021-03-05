@@ -4,7 +4,7 @@ using namespace std;
 
 class User //This is class
 {
-private: // Bydefault class is private no need write it, it is optional.
+private: // By-default class is private no need write it, it is optional.
     int secret = 22;
 
 public:
