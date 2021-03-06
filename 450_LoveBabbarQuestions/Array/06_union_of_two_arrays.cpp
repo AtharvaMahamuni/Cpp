@@ -27,6 +27,8 @@ void findUnion(int array1[], int array2[], int n, int m)
         cout << array2[j++] << " ";
 }
 
+void findUnion(int[], int[], int, int);
+
 int main()
 {
 
