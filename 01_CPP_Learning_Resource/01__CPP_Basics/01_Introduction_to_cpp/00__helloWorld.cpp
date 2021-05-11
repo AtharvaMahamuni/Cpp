@@ -10,6 +10,7 @@ int main()
     return 0;                     //return will tell to stop the program and return the zero to the OS.
 } //Actuall return will denote the success in program.
 //The reason behind returning 0(we can use other integer also) is that return type of main is int suppose if it char then may we can return 'a' or any other character & if it is void then we can't return anything.
+
 //Take note that void and zero are two differnt things void means nothing and zero is more towards indicating a number understand the difference
 
 //Let's write one more C++ program.

@@ -9,22 +9,24 @@ int main()
     int *myp = &score;
 
     printf("Value of score is %d\n", score);
-    printf("Value of pointer is %p\n", myp);
+    printf("Value of myp is %p\n", myp);
 
-    //Now this is IMP
+    //FIXME: Now this is IMP
     int &another_score = score; //Here we choose another_score as a refernce for score
     another_score = 800;        //whatever change we are going to do in the value of another_score is going to reflect in score
 
+    cout << endl;
+
     printf("Value of score is %d\n", score);
-    printf("Value of pointer is %p\n", myp);
+    printf("Value of myp is %p\n", myp);
 
     cout << endl;
     //Values of score and another_score
-    printf("score value= %d   another_score value= %d", score, another_score);
+    printf("score value= %d    another_score value= %d", score, another_score);
 
     cout << endl;
 
-    //address of score and another_score
+    //address of score and another_score both are same i.e. they are sharing same memory resource.
     printf("score add.= %d   another_score add.= %d", &score, &another_score);
 
     return 0;

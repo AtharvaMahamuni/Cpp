@@ -11,7 +11,7 @@ int main()
     // life2 = 5; //const is not allowed to vary it has fixed value
 
     int my_life = life;
-    cout << my_life << endl;
+    cout << "my_life: " <<my_life << endl;
     //We can assign value from one variable to another.
 
     int *myl;

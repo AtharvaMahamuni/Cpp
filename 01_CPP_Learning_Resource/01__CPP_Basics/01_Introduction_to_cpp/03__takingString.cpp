@@ -21,5 +21,5 @@ int main()
 }
 
 //getline is function from string library which take two
-//parameters on is standard input stream and second is variable
+//parameters first is standard input stream and second is variable
 //It is very handy to take inputs in string format

@@ -13,7 +13,7 @@ int main()
     integer_array[0] = 5;
     printf("%d\n", integer_array[0]);
 
-    cout << "------------------" << endl;
+    cout << "---------------------" << endl;
 
     int another_array[4];
     another_array[0] = 5;
@@ -28,6 +28,8 @@ int main()
     *arr_p = 19; //Pointer referencing
     cout << another_array[1] << endl;
     // another_array++;//we can't increament this due to C++ guidlines or standards
+
+    cout << "---------------------" << endl;
 
     arr_p++;
     *arr_p = 20;

@@ -26,7 +26,7 @@ int main()
     i = 8;
     do
     {
-        cout << my_numbers[i] << endl;
+        cout << my_numbers[i] << endl; //It will print some grabage value at position 8 which is not present in array.
         i++;
 
     } while (i < 7);
