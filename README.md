@@ -1,2 +1,2 @@
 # competitive-programmers-guide                                                                                                                       
-Tring to dcument my journey to become a good problem solver
+ Guide to learn some basic concepts of C++ and few important DS and Algo
