@@ -11,19 +11,23 @@ int main()
     // life2 = 5; //const is not allowed to vary it has fixed value
 
     int my_life = life;
-    cout << "my_life: " <<my_life << endl;
+    cout << "my_life: " << my_life << endl; // my_life: 5
     //We can assign value from one variable to another.
 
     int *myl;
-    myl = &life; //referncing
-    cout << myl << endl;
-    myl = &my_life; //here we are storing address of my_life in myl (It is something known as referncing.)
-    cout << myl << endl;
+    //referncing a variable
+    myl = &life;
+    cout << myl << endl; // 0x7ffc5dcf3e58
 
-    my_life = *myl; //pointer dereferncing
-    cout << my_life << endl;
-    cout << myl << endl;
-    cout << *myl << endl;
+    //here we are storing address of my_life in myl (It is something known as referncing.)
+    myl = &my_life;
+    cout << myl << endl; // 0x7ffc5dcf3e58
+
+    //pointer dereferncing
+    my_life = *myl;
+    cout << my_life << endl; // 5
+    cout << myl << endl;     // 0x7ffc5dcf3e58
+    cout << *myl << endl;    // 5
 
     return 0;
 }
