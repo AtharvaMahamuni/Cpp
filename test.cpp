@@ -4,17 +4,12 @@ using namespace std;
 int main()
 {
 
-    struct a
+    int add = [](int a, int b)
     {
-        long int i;
-        char ch[4];
+        return a + b;
     };
 
-    struct a s;
-
-    s.i = 512;
-
-    cout << s.ch[0] << " " << s.ch[1] << " " << s.ch[2];
+    cout << add(4,5);
 
     return 0;
 }
