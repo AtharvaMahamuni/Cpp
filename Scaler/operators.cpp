@@ -1,28 +1,28 @@
 #include <iostream>
 using namespace std;
 
-int main()
-{
-    // bitwise NOT
-    cout << "~" << "10" << " is " << ~10 << endl;
+// int main()
+// {
+//     // bitwise NOT
+//     cout << "~" << "10" << " is " << ~10 << endl;
 
-    // bitwise AND
-    cout << "4" << " & " << "5" << " is " << (4 & 5) << endl;
+//     // bitwise AND
+//     cout << "4" << " & " << "5" << " is " << (4 & 5) << endl;
 
-    // bitwise OR
-    cout << "4" << " | " << "5" << " is " << (4 | 5) << endl;
+//     // bitwise OR
+//     cout << "4" << " | " << "5" << " is " << (4 | 5) << endl;
 
-    // bitwise XOR
-    cout << "4" << " ^ " << "5" << " is " << (4 ^ 5) << endl;
+//     // bitwise XOR
+//     cout << "4" << " ^ " << "5" << " is " << (4 ^ 5) << endl;
 
-    // bitwise left shift
-    cout << "4" << " << " << "2" << " is " << (4 << 2) << endl;
+//     // bitwise left shift
+//     cout << "4" << " << " << "2" << " is " << (4 << 2) << endl;
 
-    // bitwise right shift
-    cout << "4" << " >> " << "2" << " is " << (4 >> 2) << endl;
+//     // bitwise right shift
+//     cout << "4" << " >> " << "2" << " is " << (4 >> 2) << endl;
 
-    return 0;
-}
+//     return 0;
+// }
 
 // int main()
 // {
@@ -120,25 +120,26 @@ int main()
 //     return 0;
 // }
 
-// int main()
-// {
-//     int a = 5;
+int main()
+{
+    int x;
+    int a = 5;
 
-//     // post increament
-//     a++;
-//     cout << a << endl;
+    // post increament
+    x = a++;
+    cout << "value of x is " << x << ", value of a is " << a << endl;
 
-//     // pre increament
-//     ++a;
-//     cout << a << endl;
+    // pre increament
+    x = ++a;
+    cout << "value of x is " << x << ", value of a is " << a << endl;
 
-//     // post decrement
-//     a--;
-//     cout << a << endl;
+    // post decrement
+    x = a--;
+    cout << "value of x is " << x << ", value of a is " << a << endl;
 
-//     // pre decrement
-//     --a;
-//     cout << a << endl;
+    // pre decrement
+    x = --a;
+    cout << "value of x is " << x << ", value of a is " << a << endl;
 
-//     return 0;
-// }
+    return 0;
+}
